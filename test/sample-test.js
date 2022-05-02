@@ -1,7 +1,6 @@
 describe("NFTMarket", function () {
   it("Should create and execute market sales", async function () {
 
-    /* deploy the marketplace */
     const NFTMarketplace = await ethers.getContractFactory("NFTMarketplace")
     const nftMarketplace = await NFTMarketplace.deploy()
     await nftMarketplace.deployed()
@@ -12,7 +11,7 @@ describe("NFTMarket", function () {
     const auctionPrice = ethers.utils.parseUnits('1', 'ether')
 
     await nftMarketplace.createToken("ipfs://bafkreifnjows2gck3yjiucc5ve4rbulj42enewdgpp34hm7gg53yqlvoli/", auctionPrice, { value: listingPrice })
-    await nftMarketplace.createToken("https://www.mytokenlocation2.com", auctionPrice, { value: listingPrice })
+    await nftMarketplace.createToken("ipfs://bafybeiel5jjvtxelqbkiswbr6df7xolerrcke7zx5awocqs6bizdbiqwdi/", auctionPrice, { value: listingPrice })
 
     const [_, buyerAddress] = await ethers.getSigners()
 
