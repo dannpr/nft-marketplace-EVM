@@ -4,7 +4,7 @@ const testmat = "N5gZqsy9imVP8JOYdhT2BxusQMUJ8Hm0"
 module.exports = {
   network: {
     hardhat: {
-      chainId: 1337
+      chainId: 31337
     },
     mumbai: {
       // mettre le liens d'acces apres v2 en ${}
